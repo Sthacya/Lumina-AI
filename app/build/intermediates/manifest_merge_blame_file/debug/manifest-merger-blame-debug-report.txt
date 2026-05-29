@@ -1,0 +1,256 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.safetydriveai"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:8:5-66
+14-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:8:22-63
+15
+16    <uses-feature android:name="android.hardware.camera" />
+16-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:10:5-60
+16-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:10:19-57
+17    <uses-feature android:name="android.hardware.location.gps" />
+17-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:11:5-66
+17-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:11:19-63
+18
+19    <!-- Include required permissions for Google Maps API to run. -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+20-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:23:22-76
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
+21-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:24:22-64
+22
+23    <uses-feature
+23-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+24        android:glEsVersion="0x00020000"
+24-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+25        android:required="true" />
+25-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+26
+27    <queries>
+27-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+28
+29        <!-- Needs to be explicitly declared on Android R+ -->
+30        <package android:name="com.google.android.apps.maps" />
+30-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+30-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+31    </queries>
+32
+33    <permission
+33-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+34        android:name="com.example.safetydriveai.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+34-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+35        android:protectionLevel="signature" />
+35-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+36
+37    <uses-permission android:name="com.example.safetydriveai.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+37-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+37-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+38
+39    <application
+39-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:13:5-39:19
+40        android:allowBackup="true"
+40-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:14:9-35
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.10.1] C:\Users\ACER\.gradle\caches\transforms-3\b577296ba554db3b328c100990b942b3\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+42        android:dataExtractionRules="@xml/data_extraction_rules"
+42-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:15:9-65
+43        android:debuggable="true"
+44        android:extractNativeLibs="false"
+45        android:fullBackupContent="@xml/backup_rules"
+45-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:16:9-54
+46        android:icon="@mipmap/ic_launcher"
+46-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:17:9-43
+47        android:label="@string/app_name"
+47-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:18:9-41
+48        android:roundIcon="@mipmap/ic_launcher_round"
+48-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:19:9-54
+49        android:supportsRtl="true"
+49-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:20:9-35
+50        android:testOnly="true"
+51        android:theme="@style/Theme.SafetyDriveAI" >
+51-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:21:9-51
+52        <activity
+52-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:24:9-31:20
+53            android:name="com.example.safetydriveai.ActivityLanding"
+53-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:25:13-44
+54            android:exported="true" >
+54-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:26:13-36
+55            <intent-filter>
+55-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:27:13-30:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:28:17-69
+56-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:28:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:29:17-77
+58-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:29:27-74
+59            </intent-filter>
+60        </activity>
+61
+62        <meta-data
+62-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:32:9-34:71
+63            android:name="com.google.android.geo.API_KEY"
+63-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:33:13-58
+64            android:value="AIzaSyCkkNQIMOBbg2Zl0zspNVwvMbThfIM2uJ8" />
+64-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:34:13-68
+65
+66        <activity
+66-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:36:9-38:40
+67            android:name="com.example.safetydriveai.MainActivity"
+67-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:37:13-41
+68            android:exported="false" />
+68-->C:\Users\ACER\Downloads\Lumina-AI\app\src\main\AndroidManifest.xml:38:13-37
+69
+70        <service
+70-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
+71            android:name="androidx.camera.core.impl.MetadataHolderService"
+71-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
+72            android:enabled="false"
+72-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+73            android:exported="false" >
+73-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+74            <meta-data
+74-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
+75                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+75-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
+76                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+76-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\94612b44da393003b73b2656e8746aef\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
+77        </service> <!-- Needs to be explicitly declared on P+ -->
+78        <uses-library
+78-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+79            android:name="org.apache.http.legacy"
+79-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+80            android:required="false" />
+80-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\ACER\.gradle\caches\transforms-3\c442821bac97cf11f708637a1e89bf09\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+81
+82        <activity
+82-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\be11a21d3902fa1627a826e5fbdf00bb\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+83            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+83-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\be11a21d3902fa1627a826e5fbdf00bb\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+84            android:exported="false"
+84-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\be11a21d3902fa1627a826e5fbdf00bb\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+85            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+85-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\be11a21d3902fa1627a826e5fbdf00bb\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+86
+87        <meta-data
+87-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\a64978c62c27ddf4bd0983c6834a27e9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+88            android:name="com.google.android.gms.version"
+88-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\a64978c62c27ddf4bd0983c6834a27e9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+89            android:value="@integer/google_play_services_version" />
+89-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ACER\.gradle\caches\transforms-3\a64978c62c27ddf4bd0983c6834a27e9\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+90
+91        <provider
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+92            android:name="androidx.startup.InitializationProvider"
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+93            android:authorities="com.example.safetydriveai.androidx-startup"
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+94            android:exported="false" >
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+95            <meta-data
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+97                android:value="androidx.startup" />
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\transforms-3\44694f75fac89dd7ed47624cb64767e1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+98            <meta-data
+98-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ACER\.gradle\caches\transforms-3\9e114c665271aa662c3fb48309024e27\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+99                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+99-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ACER\.gradle\caches\transforms-3\9e114c665271aa662c3fb48309024e27\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+100                android:value="androidx.startup" />
+100-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ACER\.gradle\caches\transforms-3\9e114c665271aa662c3fb48309024e27\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+101            <meta-data
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+102                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+103                android:value="androidx.startup" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+104        </provider>
+105
+106        <receiver
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+107            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+108            android:directBootAware="false"
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+109            android:enabled="true"
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+110            android:exported="true"
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+111            android:permission="android.permission.DUMP" >
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+113                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+114            </intent-filter>
+115            <intent-filter>
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+116                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+117            </intent-filter>
+118            <intent-filter>
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+119                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+120            </intent-filter>
+121            <intent-filter>
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+122                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\transforms-3\6a73d39a81dce6bab1204e5e554555f1\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+123            </intent-filter>
+124        </receiver>
+125
+126        <service
+126-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
+127            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+127-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
+128            android:exported="false" >
+128-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
+129            <meta-data
+129-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
+130                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+130-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
+131                android:value="cct" />
+131-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\1c9abbc28beadc436ade82d70f2c1e0c\transformed\jetified-transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
+132        </service>
+133        <service
+133-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
+134            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+134-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
+135            android:exported="false"
+135-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
+136            android:permission="android.permission.BIND_JOB_SERVICE" >
+136-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+137        </service>
+138
+139        <receiver
+139-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
+140            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+140-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:33:13-132
+141            android:exported="false" />
+141-->[com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\ACER\.gradle\caches\transforms-3\2e8a052d5d6332040e0535a6cebe966c\transformed\jetified-transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
+142    </application>
+143
+144</manifest>

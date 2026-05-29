@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.mediapipe:tasks-vision:0.10.0@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9872ecedc6325608b15e97efa503d022/transformed/jetified-tasks-vision-0.10.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9872ecedc6325608b15e97efa503d022/transformed/jetified-tasks-vision-0.10.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
