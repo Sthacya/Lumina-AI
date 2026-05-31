@@ -132,3 +132,44 @@ class MainActivity : AppCompatActivity() {
         // TODO: Jessie - Tulis Intent untuk melempar pencarian Rest Area ke aplikasi Google Maps asli
     }
 }
+
+private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
+    ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
+}
+
+override fun onRequestPermissionsResult(
+    requestCode: Int, permissions: Array<String>, grantResults: IntArray
+) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    if (requestCode == REQUEST_CODE_PERMISSIONS) {
+        if (allPermissionsGranted()) {
+            startCamera()
+            ambilLokasiTerkini()
+        } else {
+            Toast.makeText(this, "Izin ditolak oleh pengguna.", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+    }
+}
+
+override fun onStart() { super.onStart(); try { binding.mapView.onStart() } catch (e: Exception) {} }
+override fun onResume() { super.onResume(); try { binding.mapView.onResume() } catch (e: Exception) {} }
+override fun onPause() { super.onPause(); try { binding.mapView.onPause() } catch (e: Exception) {} }
+override fun onStop() { super.onStop(); try { binding.mapView.onStop() } catch (e: Exception) {} }
+override fun onDestroy() {
+    super.onDestroy()
+    cameraExecutor?.shutdown()
+    matikanAlarm()
+    try { binding.mapView.onDestroy() } catch (e: Exception) {}
+}
+override fun onLowMemory() { super.onLowMemory(); try { binding.mapView.onLowMemory() } catch (e: Exception) {} }
+
+companion object {
+    private const val REQUEST_CODE_PERMISSIONS = 10
+    private val REQUIRED_PERMISSIONS = arrayOf(
+        Manifest.permission.CAMERA,
+        Manifest.permission.ACCESS_FINE_LOCATION,
+        Manifest.permission.ACCESS_COARSE_LOCATION
+    )
+}
+}
