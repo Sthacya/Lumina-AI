@@ -28,13 +28,76 @@ class MainActivity : AppCompatActivity() {
     // =================================================================
     // 🧑‍💻 AREA KERJA: elen (CORE CAMERA LOGIC)
     // =================================================================
+
+    // Fungsi buat inisialisasi dan buat nyalain kamera depan
     fun startCamera() {
-        // TODO: Aku - Tulis kodingan CameraX di sini untuk menyalakan kamera depan
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        cameraProviderFuture.addListener({
+            // 1. Ambil instance dari ProcessCameraProvider secara asynchronous
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+
+            // 2. Buat objek Preview dan hubungkan surface provider-nya ke XML viewFinder
+            val preview = Preview.Builder()
+                .build()
+                .also {
+                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                }
+
+            // 3. Konfigurasi ImageAnalysis dengan resolusi target & strategi backpressure
+            val imageAnalysis = ImageAnalysis.Builder()
+                .setTargetResolution(android.util.Size(640, 480))
+                .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                .build()
+
+            // 4. Atur Analyzer untuk menangkap frame kamera dan mengirimkannya ke AI Indy
+            imageAnalysis.setAnalyzer(cameraExecutor!!) { imageProxy ->
+                // Mengonversi frame kamera (ImageProxy) menjadi format yang dibutuhkan MediaPipe
+                if (faceLandmarker != null) {
+                    val frameTime = android.os.SystemClock.uptimeMillis()
+                    val bitmap = imageProxy.toBitmap()
+                    val mpImage = com.google.mediapipe.framework.image.BitmapImageBuilder(bitmap).build()
+
+                    // Mengirimkan gambar bitmap ke fungsi pendeteksian asynchronously
+                    faceLandmarker?.detectAsync(mpImage, frameTime)
+                }
+
+                // CRITICAL: Selalu tutup imageProxy agar frame berikutnya bisa diambil
+                imageProxy.close()
+            }
+
+            // 5. Tentukan selektor kamera menggunakan kamera depan (Realme C65)
+            val cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
+
+            try {
+                // 6. Lakukan unbindAll() sebelum melakukan binding baru agar tidak bentrok
+                cameraProvider.unbindAll()
+
+                // 7. Ikat daur hidup kamera ke lifecycle MainActivity ini
+                cameraProvider.bindToLifecycle(
+                    this,
+                    cameraSelector,
+                    preview,
+                    imageAnalysis
+                )
+
+            } catch (exc: Exception) {
+                android.util.Log.e("LuminaAI", "Binding kamera ke lifecycle gagal: ${exc.message}")
+                runOnUiThread {
+                    Toast.makeText(this, "Gagal membuka kamera depan.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }, ContextCompat.getMainExecutor(this))
     }
 
+    // Fungsi tambahan untuk ngatur daur hidup kamera jika dipanggil secara manual
     fun aturLifecycleKamera() {
-        // TODO: Aku - Atur binding daur hidup kamera di sini (onResume / onPause)
+        // Kamera bakal otomatis berhenti (unbind) waktu onPause() / onDestroy()
+        // dan menyala kembali pas onResume() berkat library AndroidX Camera2.
+        android.util.Log.d("LuminaAI", "Daur hidup kamera otomatis dikelola oleh CameraX Lifecycle.")
     }
+
 
     // =================================================================
     // 🔬 AREA KERJA: INDY (AI EXPERT & ALARM)
