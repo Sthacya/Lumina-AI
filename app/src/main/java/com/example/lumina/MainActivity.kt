@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     // 🧑‍💻 AREA KERJA: elen (CORE CAMERA LOGIC)
     // =================================================================
 
+<<<<<<< HEAD
     // =================================================================
     // 🔬 AREA KERJA: INDY (AI EXPERT & ALARM) - Branch: ear-alarm
     // =================================================================
@@ -240,6 +241,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnFindRest.visibility = View.GONE
     }
 
+=======
+>>>>>>> b6ffdbdab67e5bb2d495301345952676cf49e488
     // Fungsi buat inisialisasi dan buat nyalain kamera depan
     fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
@@ -302,7 +305,10 @@ class MainActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b6ffdbdab67e5bb2d495301345952676cf49e488
     // Fungsi tambahan untuk ngatur daur hidup kamera jika dipanggil secara manual
     fun aturLifecycleKamera() {
         // Kamera bakal otomatis berhenti (unbind) waktu onPause() / onDestroy()
@@ -312,6 +318,26 @@ class MainActivity : AppCompatActivity() {
 
 
     // =================================================================
+<<<<<<< HEAD
+=======
+    // 🔬 AREA KERJA: INDY (AI EXPERT & ALARM)
+    // Nama Branch: ear-alarm
+    // =================================================================
+    fun setupFaceLandmarker() {
+        // TODO: Indy - Tulis inisialisasi FaceLandmarker & RunningMode.LIVE_STREAM di sini
+    }
+
+    fun processFaceLandmarks(hasilLandmark: Any?) {
+        // TODO: Indy - Tulis Rumus EAR, Filter Deteksi Gigi/Senyum, dan Deteksi Menoleh di sini
+    }
+
+    fun kelolaAlarmDanGetar(apakahMengantuk: Boolean) {
+        // TODO: Indy - Tulis logika pemicu MediaPlayer (.mp3) dan Vibrator HP di sini
+    }
+
+
+    // =================================================================
+>>>>>>> b6ffdbdab67e5bb2d495301345952676cf49e488
     // 🗺️ AREA KERJA: JESSIE (GIS MAPS)
     // Nama Branch: maps-config
     // =================================================================
