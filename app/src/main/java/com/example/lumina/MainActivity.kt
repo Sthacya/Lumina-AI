@@ -153,15 +153,37 @@ class MainActivity : AppCompatActivity() {
     // 🗺️ AREA KERJA: JESSIE (GIS MAPS)
     // Nama Branch: maps-config
     // =================================================================
-    fun inisialisasiGoogleMaps() {
-        // TODO: Jessie - Tulis pengaturan OnMapReadyCallback untuk menampilkan peta di sini
+    // Akses sensor internal GPS FusedLocation untuk ekstraksi koordinat bumi pengemudi
+    private fun ambilLokasiTerkini() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                if (location != null) {
+                    val lat = location.latitude
+                    val lng = location.longitude
+                    lokasiTerakhir = LatLng(lat, lng)
+
+                    // Geser fokus kamera peta Google Maps ke koordinat aktual user
+                    gMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(lokasiTerakhir!!, 16f))
+
+                    // Konversi data koordinat angka menjadi baris string teks alamat fisik asli Indonesia
+                    try {
+                        val geocoder = Geocoder(this, Locale("id", "ID"))
+                        val alamatList = geocoder.getFromLocation(lat, lng, 1)
+                        if (!alamatList.isNullOrEmpty()) {
+                            binding.tvLocation.text = "Lokasi: ${alamatList[0].getAddressLine(0)}"
+                        }
+                    } catch (e: Exception) {}
+                }
+            }
+        }
     }
 
-    fun ambilLokasiTerkini() {
-        // TODO: Jessie - Tulis kodingan FusedLocationProviderClient untuk GPS di sini
-    }
-
-    fun ruteRestAreaTerdekat() {
-        // TODO: Jessie - Tulis Intent untuk melempar pencarian Rest Area ke aplikasi Google Maps asli
+    // Melakukan setup layer maps begitu callback SDK Google Maps siap dijalankan
+    override fun onMapReady(googleMap: GoogleMap) {
+        gMap = googleMap
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            gMap?.isMyLocationEnabled = true
+            gMap?.uiSettings?.isMyLocationButtonEnabled = true
+        }
     }
 }
